@@ -33,7 +33,7 @@ export default function Header() {
             <header className={"bg-[#161D25] flex justify-center mobile:justify-between items-center gap-5 p-12"}>
                 <Image src={"/Images/logo.png"} alt={"logo"} height={60} width={60}/>
                 <ul className={"flex gap-2 mobile:hidden"}>
-                    <HeaderButton url={"/home"} title={"Accueil"}/>
+                    <HeaderButton url={"/"} title={"Accueil"}/>
                     <HeaderButton url={"/collab"} title={"Collaborateurs"}/>
                     <HeaderButton url={"/contact"} title={"Contactez-nous"}/>
                 </ul>
