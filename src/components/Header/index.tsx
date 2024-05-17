@@ -37,7 +37,7 @@ export default function Header() {
                     <HeaderButton url={"/collab"} title={"Collaborateurs"}/>
                     <HeaderButton url={"/contact"} title={"Contactez-nous"}/>
                 </ul>
-                <div onClick={toggleMenu} className={"cursor-pointer hidden mobile:flex justify-center items-center"}>
+                <div onClick={toggleMenu} className={"cursor-pointer hidden mobile:flex justify-center items-center z-30"}>
                     <AnimatePresence>
                         {isOpen ? (
                             <motion.div key={"closeButton"} className={"absolute"} initial={{opacity: 0, y: -20}}
