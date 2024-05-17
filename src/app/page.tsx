@@ -1,8 +1,7 @@
-import Footer from "@/components/footer";
+import Collaborateurs from "@/components/Collaborateurs";
 
 export default function Home() {
   return (
-    <main>
-    </main>
+    <Collaborateurs/>
   );
 }
