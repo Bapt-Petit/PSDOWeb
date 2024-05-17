@@ -8,7 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+      colors: {
+        custom_yellow: "#F4D03F",
+        custom_green: "#D2EC60",
+        custom_blue_black: "#161D25"
+      },
     },
   },
   plugins: [],
