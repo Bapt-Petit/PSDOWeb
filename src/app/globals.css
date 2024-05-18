@@ -6,3 +6,26 @@
   margin: 0;
   padding: 0;
 }
+
+.custom-dashed-border {
+  position: relative;
+  width: 70%;
+  height: 5px;
+  border-color: white;
+}
+
+.custom-dashed-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #F4D03F,
+    #F4D03F 25px,
+    transparent 25px,
+    transparent 50px
+  );
+}
