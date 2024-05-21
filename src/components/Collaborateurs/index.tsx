@@ -35,10 +35,10 @@ export default function Collaborateurs() {
           <h2>Baptiste Petit</h2>
         </div>
         <div className="flex flex-col gap-[22px] justify-center items-center">
-          <p className="w-[300px] md:w-[500px] text-center">Un développeur web compétent en front et back-end, alliant expertise technique et créativité.</p>
+          <p className="w-[300px] md:w-[500px] text-center">Je suis Baptiste Petit, fondateur de PSDOweb, une entreprise dédiée à la mise en relation de développeurs web freelances et de clients ayant des besoins technologiques spécifiques. Notre mission est de connecter des talents qualifiés avec des projets ambitieux, en garantissant qualité, sécurité et originalité. Ensemble, nous construisons le web de demain.</p>
           <div>
             <Link href="/nous-contacter" className="flex justify-center items-center w-[343px] h-[41px] bg-custom_yellow rounded-[5px] shadow-lg z-10">
-              Mon Site
+              Portfolio
             </Link>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function Collaborateurs() {
           <p className="w-[300px] md:w-[500px] text-center">En tant que développeur web expérimenté, j'excelle aussi bien en front-end qu'en back-end, combinant une solide maîtrise technique avec une grande créativité. Je suis prêt à mettre mes compétences à votre disposition pour assurer le succès de votre projet.</p>
           <div>
             <Link href="/nous-contacter" className="flex justify-center items-center w-[343px] h-[41px] bg-custom_yellow rounded-[5px] shadow-lg z-10">
-              Mon Site
+            Portfolio
             </Link>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function Collaborateurs() {
           <p className="w-[300px] md:w-[500px] text-center">Passionné par le codage informatique depuis de nombreuses années, j'ai toujours eu une prédilection pour le développement web, tant pour l'aspect design que pour le côté technique. Je serais ravi de mettre mes compétences à votre service pour mener à bien votre projet.</p>
           <div>
             <Link href="/nous-contacter" className="flex justify-center items-center w-[343px] h-[41px] bg-custom_yellow rounded-[5px] shadow-lg z-10">
-              Mon Site
+            Portfolio
             </Link>
           </div>
         </div>
@@ -96,18 +96,18 @@ export default function Collaborateurs() {
       <div className=" hidden lg:flex relative">
         <hr className="custom-dashed-border my-4 absolute left-[400px]" />
       </div>
-      <section id="collab_4" className=" flex flex-col items-center gap-[22px] px-[10px] py-5 relative lg:flex-row-reverse lg:h-[320px] justify-center lg:gap-52">
+      <section id="collab_4" className=" flex flex-col items-center gap-[22px] px-[10px] py-5 relative lg:flex-row-reverse lg:h-[320px] justify-center lg:gap-52  bg-gradient-to-t from-0% from-custom_blue_black to-10% to-white ">
         <div className="flex flex-col gap-[10px] items-center">
-          <div className="rounded-full bg-black w-fit">
+          <div className=" bg-black w-fit">
             <Image src={"/images/logoMP.png"} alt="logo_maxime_petit" width={100} height={100} className="p-1 w-14 md:w-20" />
           </div>
           <h2>Maxime Petit</h2>
         </div>
         <div className="flex flex-col gap-[22px] justify-center items-center">
-          <p className="w-[300px] md:w-[500px] text-center">Un développeur web compétent en front et back-end, alliant expertise technique et créativité.</p>
+          <p className="w-[300px] md:w-[500px] text-center">Je suis un développeur web spécialisé en front-end et back-end, alliant expertise technique et créativité pour livrer des sites à la fois performants et esthétiquement plaisants. Ma maîtrise de JavaScript, React et Node.js m'aide à trouver des solutions pour correspondre à vos attentes.</p>
           <div>
             <Link href="/nous-contacter" className="flex justify-center items-center w-[343px] h-[41px] bg-custom_yellow rounded-[5px] shadow-lg z-10">
-              Mon Site
+            Portfolio
             </Link>
           </div>
         </div>
