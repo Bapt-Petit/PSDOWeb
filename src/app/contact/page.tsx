@@ -76,7 +76,7 @@ export default function Page() {
                             des
                             informations supplémentaires sur votre projet ?</label>
                         <input onChange={changeHandler} type="checkbox" id="checkbox_info" name="checkbox_info"
-                               className={"scale-125 checked:accent-custom_yellow"}/>
+                               className={"scale-125 checked:accent-black"}/>
                     </div>
                 </section>
                 <section
@@ -100,14 +100,14 @@ export default function Page() {
                                         logo
                                         ?</label>
                                     <input type="checkbox" id="already_logo" name="already_logo"
-                                           className={"scale-125 checked:accent-custom_green"}/>
+                                           className={"scale-125 checked:accent-black"}/>
                                     <label htmlFor="using_socialmedia" className={"w-72 text-center font-medium"}>Utilisez-vous
                                         déjà
                                         des
                                         plateformes
                                         de réseaux sociaux pour votre activité ?</label>
                                     <input type="checkbox" id="using_socialmedia" name="using_socialmedia"
-                                           className={"scale-125 checked:accent-custom_green"}/>
+                                           className={"scale-125 checked:accent-black"}/>
                                     <CustomFormInput type={"text"} name={"motivation"}
                                                      labelVal={"Qu'est-ce qui vous motive à créer un site web ?"}/>
                                 </motion.div>
@@ -126,7 +126,7 @@ export default function Page() {
                             <label htmlFor="checkbox_ispro" className={"w-72 text-center font-medium"}>Êtes-vous un
                                 professionnel ?</label>
                             <input onChange={changeHandler} type="checkbox" id="checkbox_ispro" name="profesionnal"
-                                   className={"scale-125 checked:accent-custom_green"}/>
+                                   className={"scale-125 checked:accent-black"}/>
                         </div>
                     </div>
                 </section>
@@ -149,7 +149,7 @@ export default function Page() {
                                             d’un site web ?</label>
                                         <input onChange={() => setShowhaswebsite(!showhaswebsite)} type="checkbox"
                                                id="already_website" name="already_website"
-                                               className={"scale-125 checked:accent-custom_green"}/>
+                                               className={"scale-125 checked:accent-black"}/>
                                         <AnimatePresence>
                                             {showhaswebsite && (
                                                 <motion.div initial={{opacity: 0}} animate={{opacity: 1}}
@@ -168,7 +168,7 @@ export default function Page() {
                                             échéance pour la réalisation de votre projet ?</label>
                                         <input onClick={() => setShowhasdue(!showhasdue)} type="checkbox" id="due_date"
                                                name="due_date"
-                                               className={"scale-125 checked:accent-custom_green"}/>
+                                               className={"scale-125 checked:accent-black"}/>
                                         <AnimatePresence>
                                             {showhasdue && (
                                                 <motion.div initial={{opacity: 0}} animate={{opacity: 1}}
@@ -186,9 +186,9 @@ export default function Page() {
                                className={`${showIsPro ? 'block' : 'hidden'} absolute bottom-0 h-52 object-cover`}/>
                     </>
                     <div className={"pt-10 z-20"}>
-                        <motion.input initial={{scale: 1}} whileHover={{scale: 0.9, width: 130}} type="submit"
+                        <motion.input initial={{scale: 1}} whileHover={{scale: 0.95}} type="submit"
                                       value={"Envoyer"}
-                                      className={"bg-custom_yellow font-medium text-2xl p-1.5 rounded shadow-custom_shadow cursor-pointer"}/>
+                                      className={"bg-custom_yellow font-medium text-2xl w-[150px] p-1.5 rounded shadow-custom_shadow cursor-pointer"}/>
                     </div>
                 </section>
             </form>
@@ -200,6 +200,12 @@ export default function Page() {
                    className={"mobile:hidden absolute left-[19rem] top-[10rem] opacity-10"}/>
             <Image src={"/Images/decoration/Icons/4.png"} alt={''} width={160} height={160}
                    className={"mobile:hidden absolute right-[10rem] top-[20rem] opacity-10"}/>
+            <Image src={"/Images/decoration/Icons/6.png"} alt={''} width={160} height={160}
+                   className={"mobile:hidden absolute left-[10rem] top-[30rem] opacity-10"}/>
+            <Image src={"/Images/decoration/Icons/4.png"} alt={''} width={300} height={300}
+                   className={"mobile:hidden absolute right-[10rem] top-[65rem] opacity-10"}/>
+            <Image src={"/Images/decoration/Icons/4.png"} alt={''} width={300} height={300}
+                   className={"mobile:hidden absolute left-[10rem] top-[65rem] opacity-10"}/>
         </div>
     )
 }
