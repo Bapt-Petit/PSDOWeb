@@ -42,8 +42,8 @@ export default function Collaborateurs() {
             </Link>
           </div>
         </div>
-        <Image src={"/images/cloud.png"} alt="cloud_logo" width={50} height={50} className=" absolute opacity-10 top-5 lg:top-56 right-16 sm:right-32" />
-        <Image src={"/images/client.png"} alt="client_logo" width={50} height={50} className="hidden absolute opacity-10 top-5 lg:flex left-16 sm:left-32" />
+        <Image src={"/images/cloud.png"} alt="cloud_logo" width={75} height={75} className=" absolute opacity-10 top-5 lg:top-56 right-16 sm:right-32" />
+        <Image src={"/images/client.png"} alt="client_logo" width={75} height={75} className="hidden absolute opacity-10 top-5 lg:flex left-16 sm:left-32" />
       </section>
 
 
@@ -65,8 +65,8 @@ export default function Collaborateurs() {
             </Link>
           </div>
         </div>
-        <Image src={"/images/planet.png"} alt="world_wide_web" width={50} height={50} className=" absolute opacity-10 top-5 lg:bottom-56 left-16 sm:right-32 lg:left-[88%]" />
-        <Image src={"/images/server.png"} alt="server_logo" width={50} height={50} className="hidden absolute opacity-10 bottom-5 lg:flex left-16 sm:left-32" />
+        <Image src={"/images/planet.png"} alt="world_wide_web" width={75} height={75} className=" absolute opacity-10 top-5 lg:bottom-56 left-16 sm:right-32 lg:left-[88%]" />
+        <Image src={"/images/server.png"} alt="server_logo" width={75} height={75} className="hidden absolute opacity-10 bottom-5 lg:flex left-16 sm:left-32" />
       </section>
 
 
@@ -88,8 +88,8 @@ export default function Collaborateurs() {
             </Link>
           </div>
         </div>
-        <Image src={"/images/cloud.png"} alt="cloud_logo" width={50} height={50} className=" absolute opacity-10 top-5 lg:top-56 right-16 sm:right-32" />
-        <Image src={"/images/client.png"} alt="client_logo" width={50} height={50} className="hidden absolute opacity-10 top-5 lg:flex left-16 sm:left-32" />
+        <Image src={"/images/cloud.png"} alt="cloud_logo" width={75} height={75} className=" absolute opacity-10 top-5 lg:top-56 right-16 sm:right-32" />
+        <Image src={"/images/client.png"} alt="client_logo" width={75} height={75} className="hidden absolute opacity-10 top-5 lg:flex left-16 sm:left-32" />
       </section>
 
 
@@ -111,8 +111,8 @@ export default function Collaborateurs() {
             </Link>
           </div>
         </div>
-        <Image src={"/images/planet.png"} alt="world_wide_web" width={50} height={50} className=" absolute opacity-10 top-5 lg:bottom-56 left-16 sm:right-32 lg:left-[88%]" />
-        <Image src={"/images/server.png"} alt="server_logo" width={50} height={50} className="hidden absolute opacity-10 bottom-5 lg:flex left-16 sm:left-32" />
+        <Image src={"/images/planet.png"} alt="world_wide_web" width={75} height={75} className=" absolute opacity-10 top-5 lg:bottom-56 left-16 sm:right-32 lg:left-[88%]" />
+        <Image src={"/images/server.png"} alt="server_logo" width={75} height={75} className="hidden absolute opacity-10 bottom-5 lg:flex left-16 sm:left-32" />
       </section>
     </main>
   )
