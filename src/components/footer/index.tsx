@@ -30,9 +30,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row h-fit gap-5 md:gap-2 md:mt-10">
-            <Image src={"/images/Linkedin.png"} alt="linkedin_link" width={60} height={60} className="w-5 md:w-10"/>
-            <Image src={"/images/Instagram.png"} alt="instagram_link" width={60} height={60} className=" w-5 md:w-10"/>
-            <Image src={"/images/mail.png"} alt="mail_link" width={60} height={60} className="w-5 md:w-10"/>
+            <Link href={"#"}><Image src={"/images/Linkedin.png"} alt="linkedin_link" width={60} height={60} className="w-5 md:w-10"/></Link>
+            <Link href={"#"}><Image src={"/images/Instagram.png"} alt="instagram_link" width={60} height={60} className=" w-5 md:w-10"/></Link>
+            <Link href={"#"}><Image src={"/images/mail.png"} alt="mail_link" width={60} height={60} className="w-5 md:w-10"/></Link>
           </div>
         </div>
         <Image src={"/images/cloud.png"} alt="cloud" width={70} height={70} className="opacity-10 hidden md:flex" />
