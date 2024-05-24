@@ -8,7 +8,7 @@ export default function Home() {
         <main className="">
             <title>Accueil</title>
             <section
-                className={"relative flex flex-col gap-16 mobile:gap-8 bg-gradient-to-b from-0% from-custom_blue_black to-10% to-white px-44 mobile:px-10 py-24"}>
+                className={"relative flex flex-col mobile:items-center tablet:items-center gap-16 mobile:gap-8 bg-gradient-to-b from-0% from-custom_blue_black to-10% to-white px-44 mobile:px-10 py-24"}>
                 <motion.div initial={{opacity: 0, y: -100}} animate={{opacity: 1, y: 0}} transition={{duration: 1.2}}
                             className={"flex flex-col items-center w-fit gap-5 px-16 mobile:px-5"}>
                     <motion.h2
@@ -22,7 +22,7 @@ export default function Home() {
                 </motion.div>
                 <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
                     <Image src={"/Images/logo.png"} alt={"Logo"} height={400} width={400}
-                           className={"absolute mobile:hidden top-1/2 -translate-y-1/2 right-60 opacity-10"}/>
+                           className={"absolute mobile:hidden tablet:hidden top-1/2 -translate-y-1/2 right-60 opacity-10"}/>
                 </motion.div>
             </section>
             <div className={"bg-[url('/Images/decoration/banner.png')] w-full h-44 object-cover object-center"}></div>
