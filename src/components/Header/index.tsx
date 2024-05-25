@@ -30,14 +30,16 @@ export default function Header() {
     };
     return (
         <React.Fragment>
-            <header className={"bg-[#161D25] flex justify-center mobile:justify-between items-center gap-5 p-12"}>
-                <Image src={"/Images/logo.png"} alt={"logo"} height={60} width={60}/>
-                <ul className={"flex gap-2 mobile:hidden"}>
+            <header className={"bg-[#161D25] flex justify-center mobile:justify-between sm:justify-between lg:justify-center items-center gap-5 p-12"}>
+                <Image src={"/Images/PSDOWeb_logo.png"} alt={"logo"} height={60} width={60}/>
+                <ul className={"flex gap-2 mobile:hidden sm:hidden lg:flex"}>
                     <HeaderButton url={"/"} title={"Accueil"}/>
                     <HeaderButton url={"/collab"} title={"Collaborateurs"}/>
                     <HeaderButton url={"/contact"} title={"Contactez-nous"}/>
+                    <HeaderButton url={"/faq"} title={"Foire aux Questions"}/>
+                    <HeaderButton url={"/mentions-legales"} title={"Mentions Légales"}/>
                 </ul>
-                <div onClick={toggleMenu} className={"cursor-pointer hidden mobile:flex justify-center items-center z-30"}>
+                <div onClick={toggleMenu} className={"cursor-pointer hidden mobile:flex sm:flex lg:hidden justify-center items-center z-30"}>
                     <AnimatePresence>
                         {isOpen ? (
                             <motion.div key={"closeButton"} className={"absolute"} initial={{opacity: 0, y: -20}}
@@ -85,10 +87,20 @@ export default function Header() {
                                         <Image src={"/Images/bgMenu/home.png"} alt={""} width={30} height={30}></Image>
                                         Accueil
                                     </Link>
-                                    <Link href={'/'}
+                                    <Link href={'/collab'}
                                           className={"flex justify-center items-center gap-5 w-fit text-2xl font-semibold z-20 border border-custom_yellow text-custom_yellow p-1.5 rounded-lg"}>
                                         <Image src={"/Images/bgMenu/user.png"} alt={""} width={40} height={40}></Image>
                                         Collaborateurs
+                                    </Link>
+                                    <Link href={'/faq'}
+                                          className={"flex justify-center items-center gap-5 w-fit text-2xl font-semibold z-20 border border-custom_yellow text-custom_yellow p-1.5 rounded-lg"}>
+                                        <Image src={"/Images/bgMenu/user.png"} alt={""} width={40} height={40}></Image>
+                                        Foire aux Questions
+                                    </Link>
+                                    <Link href={'/mentions-legales'}
+                                          className={"flex justify-center items-center gap-5 w-fit text-2xl font-semibold z-20 border border-custom_yellow text-custom_yellow p-1.5 rounded-lg"}>
+                                        <Image src={"/Images/bgMenu/user.png"} alt={""} width={40} height={40}></Image>
+                                        Mentions Légales
                                     </Link>
                                 </div>
                                 <div onClick={handleUlClick} className={"flex flex-col items-center"}>
