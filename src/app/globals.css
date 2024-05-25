@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.border-b-except-last > :not(:last-child) {
+    @apply border-b-2 border-dashed border-custom_yellow;
+}
+
 body {
 
 }

@@ -18,7 +18,7 @@ const config: Config = {
         custom_shadow: "0 4px 4px 0 rgba(22, 29, 37, 0.25)",
       },
       screens: {
-        "mobile": {max: "496px"},
+        "mobile": {max: "640px"},
         "tablet": {max: "1323px"}
       }
     },
