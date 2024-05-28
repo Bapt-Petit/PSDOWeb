@@ -5,8 +5,8 @@ import Construisons from "@/components/Construisons";
 export default function Home() {
   return (
     <>
-     {/* <Construisons/> */}
-     <Collaborateurs/>
+     <Construisons/>
+     {/* <Collaborateurs/> */}
      {/* <Cgu/> */}
     </>
   );

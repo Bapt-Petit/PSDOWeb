@@ -1,29 +1,42 @@
+'use client'
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Construisons() {
   return (
     <main>
-      <section className="flex flex-col gap-[60px] relative bg-gradient-to-b from-0% from-custom_blue_black to-10% to-white py-5">
-        <div className="flex flex-col items-center justify-center gap-8 m-5">
-          <h1 className="text-xl font-bold">Construisons Ensemble</h1>
+      <div className="bg-gradient-to-b from-0% from-custom_blue_black to-10% to-white p-5 text-center">
+        <motion.h1 initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }} viewport={{ once: true }} className="text-xl font-bold">Construisons Ensemble</motion.h1>
+      </div>
+      <section className="flex flex-col md:flex-row gap-[30px] relative to-white pb-5 lg:px-60">
+        <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.5 }} viewport={{ once: true }} className="flex flex-col items-center justify-center gap-8 m-5">
           <h3>Vous avez une idée précise ?</h3>
           <p className="text-xs">
             Parfait ! Nous aimons travailler avec des clients qui savent exactement ce qu&apos;ils veulent. Partagez avec nous vos spécifications, vos idées de design, les fonctionnalités que vous imaginez, et même les exemples de sites que vous admirez. Nous sommes ici pour transformer votre vision en réalité. Pour démarrer, veuillez remplir notre formulaire de contact ou nous envoyer un email à [adresse email]. Nous vous répondrons rapidement pour fixer une première réunion de consultation.
           </p>
-        </div>
-        <div className="p-3 gap-8 flex flex-col items-center justify-center text-center rounded-[10px] bg-custom_yellow z-20 m-5">
+        </motion.div>
+        <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.5 }} viewport={{ once: true }} className="p-3 gap-8 flex flex-col items-center justify-center text-center rounded-[10px] bg-custom_yellow z-20 m-5">
           <h2 className="font-bold">Besoin d&apos;inspiration ou de conseils ?</h2>
           <p className="text-xs">
             Pas de problème ! Si vous n&apos;êtes pas sûr de ce que vous voulez, ou si vous avez besoin d&apos;aide pour affiner vos idées, notre équipe de créatifs et de techniciens est à votre service. Nous pouvons vous aider à définir les objectifs de votre site, choisir le bon style visuel, et planifier les fonctionnalités qui engageront vos visiteurs. Pour commencer, contactez-nous à [adresse email], et nous planifierons une session de brainstorming pour explorer les possibilités.
           </p>
-        </div>
-        <div className="absolute bg-[url('/images/banière.png')] bg-cover bg-center h-[118px] w-full bottom-0 z-10 opacity-10"></div>
+        </motion.div>
+        <div className="absolute bg-[url('/images/banière.png')] bg-cover bg-center h-[118px] w-full bottom-0 z-10 opacity-10 lg:hidden"></div>
+        <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }} viewport={{ once: true }} className="hidden lg:flex absolute opacity-10 right-20 top-1/4">
+          <Image src={"/images/client.png"} alt="client_logo" width={100} height={100} />
+        </motion.div>
+        <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }} viewport={{ once: true }} className="hidden lg:flex absolute opacity-50 left-20 top-1/4">
+          <Image src={"/images/mail.png"} alt="mail_logo" width={100} height={100} />
+        </motion.div>
       </section>
-      
-      <section className="relative bg-gradient-to-t from-0% from-custom_blue_black to-10% to-white py-5">
-        <div className="flex flex-col gap-[50px] justify-center items-center m-5">
-          <h2 className="text-xl font-bold">Pourquoi nous choisir ?</h2>
-          <ul className="list-disc">
+
+
+      <div className="text-center p-5">
+        <motion.h2 initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }} viewport={{ once: true }} className="text-xl font-bold">Pourquoi nous choisir ?</motion.h2>
+      </div>
+      <section className="relative bg-gradient-to-t from-0% from-custom_blue_black to-10% to-white py-5 md:flex md:flex-row-reverse md:items-center lg:px-60 lg:gap-5">
+        <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.5 }} viewport={{ once: true }} className=" justify-center items-center m-5">
+          <ul className="list-disc flex flex-col gap-12">
             <li>
               <span className="underline">Innovation et Créativité :</span> Notre passion pour le design innovant et créatif nous permet de proposer des solutions sur mesure qui captivent et convertissent. Chaque projet est une opportunité de repousser les limites de ce qui est possible.
             </li>
@@ -34,8 +47,8 @@ export default function Construisons() {
               <span className="underline">Technologie Avancée :</span> En exploitant les technologies les plus récentes, nous assurons que votre site ne soit pas seulement visuellement attrayant, mais également performant et sécurisé, répondant aux standards les plus élevés du développement web.
             </li>
           </ul>
-        </div>
-        <div className="p-3 gap-8 flex flex-col items-center justify-center text-center rounded-[10px] bg-custom_yellow z-20 m-5">
+        </motion.div>
+        <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.5 }} viewport={{ once: true }} className="p-3 gap-8 flex flex-col items-center justify-center text-center rounded-[10px] bg-custom_yellow z-50 m-5 md:h-[10%]">
           <h2 className="font-bold">Prêt à commencer ?</h2>
           <p className="text-xs">
             Nous serions ravis de discuter de votre projet. Contactez-nous aujourd&apos;hui à [adresse email] ou via notre formulaire en ligne pour fixer un rendez-vous gratuit. Votre projet mérite ce qu&apos;il y a de meilleur, et nous sommes ici pour vous aider à le réaliser.
@@ -58,8 +71,16 @@ export default function Construisons() {
               <h3>Personnalisation</h3>
             </div>
           </div>
-        </div>
-        <div className="absolute bg-[url('/images/banière.png')] bg-cover bg-center h-[118px] w-full bottom-40 z-10 opacity-10"></div>
+        </motion.div>
+        <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }} viewport={{ once: true }} className="hidden md:flex absolute opacity-10 left-[18%] top-0 lg:left-20">
+          <Image src={"/images/planet.png"} alt="web_logo" width={100} height={100} />
+        </motion.div>
+        <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }} viewport={{ once: true }} className="hidden md:flex absolute opacity-10 left-[18%] lg:left-20 bottom-6 lg:bottom-10">
+          <Image src={"/images/server.png"} alt="server_logo" width={100} height={100} />
+        </motion.div>
+        <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }} viewport={{ once: true }} className="hidden lg:flex absolute opacity-10 right-20 top-1/4">
+          <Image src={"/images/cloud.png"} alt="cloud_logo" width={100} height={100} />
+        </motion.div>
       </section>
     </main>
   );
