@@ -5,113 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
-            margin: 0;
-            padding: 0;
             font-family: "Calibri";
-        }
-        body{
-            background-color: #161D25;
-        }
-        h2{
-            color: #161D25;
-        }
-        p{
-            color: #161D25;
-            font-size: larger;
-        }
-        .section_title{
-            font-size: 2rem;
-            font-weight: lighter;
-        }
-        .field_title{
-            text-decoration: underline;
-        }
-        .section{
-            width: 35rem;
-            padding: 1rem;
-            border: medium solid #D2EC60;
-            background-color: #F4D03F;
-            border-radius: 1rem;
-        }
-        .section > div{
-
         }
     </style>
 </head>
 <body>
-<h2>Nouveau contact de la part : {{name}}</h2>
-<div class="section" id="section_1">
-    <p class="section_title">Information personelle du client</p>
-    <div>
-        <p class="field_title">Mail du client</p>
-        <p>{{email}}</p>
-    </div>
-    <div>
-        <p class="field_title">Numéro de téléphone du client</p>
-        <p>{{phone}}</p>
-    </div>
-    <div>
-        <p class="field_title">Comment a t'il découvert notre service ?</p>
-        <p>{{discover_service}}</p>
-    </div>
-</div>
-<div class="section" id="section_2">
-    <p class="section_title">Le projet du client</p>
-    <div>
-        <p class="field_title">Type de projet</p>
-        <p>{{project_type}}</p>
-    </div>
-    <div>
-        <p class="field_title">Breve description de son projet</p>
-        <p>{{project_desc}}</p>
-    </div>
-    <div>
-        <p class="field_title">Couleurs préférées du client</p>
-        <p>{{fav_color}}</p>
-    </div>
-    <div>
-        <p class="field_title">Les sources d'inspiration du client</p>
-        <p>{{inspiration}}</p>
-    </div>
-    <div>
-        <p class="field_title">Le client a t'il déjà un logo ?</p>
-        <p>{{already_logo}}</p>
-    </div>
-    <div>
-        <p class="field_title">Le client utilise t'il les réseaux sociaux pour son activité ?</p>
-        <p>{{using_socialmedia}}</p>
-    </div>
-    <div>
-        <p class="field_title">Les motivations du client a l'idée de créer un site web</p>
-        <p>{{motivation}}</p>
-    </div>
-</div>
-<div class="section" id="section_3">
-    <p class="section_title">Côté professionnelle du client</p>
-    <div>
-        <p class="field_title">Le client dispose t'il déjà d'un site web ?</p>
-        <p>{{already_website}}</p>
-    </div>
-    <div>
-        <p class="field_title">Le lien vers son site web</p>
-        <p>{{link_website}}</p>
-    </div>
-    <div>
-        <p class="field_title">Les besoins spécifique du client</p>
-        <p>{{specification_needed}}</p>
-    </div>
-    <div>
-        <p class="field_title">Le budget éstimé du client pour réaliser son projet</p>
-        <p>{{estimated_budget}}</p>
-    </div>
-    <div>
-        <p class="field_title">Le client a t'il défini une date d'échéance pour son projet ?</p>
-        <p>{{due_date}}</p>
-    </div>
-    <div>
-        <p class="field_title">Date d'échéance définit par le client pour réaliser le projet</p>
-        <p>{{due_date}}</p>
-    </div>
-</div>
+<table style="margin: 0 auto">
+    <tbody>
+    <tr>
+        <td style="text-align: center">
+            <div>
+                <h1>PSDOWeb</h1>
+                <h2>Un client viens de vous envoyez un formulaire</h2>
+            </div>
+        </td>
+    </tr>
+    <!--    Section 1-->
+    <tr>
+        <td style="text-align: center;color: red"><h3>Email</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{email}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Numéro de téléphone</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{phone}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Comment a t'il découvert notre service ?</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{discover_service}}</td>
+    </tr>
+    <!--    Section 2-->
+    <tr>
+        <td style="text-align: center;color: red"><h3>Type de projet</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{project_type}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Description de son projet</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{project_desc}}</td>
+    </tr>
+    <!--    Section 3-->
+    <tr>
+        <td style="text-align: center;color: red"><h3>Couleurs préférées du client</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{fav_color}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Les sources d'inspiration du client</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{inspiration}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Le client a t'il déjà un logo</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{already_logo}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Le client utilise t'il les réseaux sociaux pour son activité ?</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{using_socialmedia}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Les motivation du client a l'idée de créer un site web</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{motivation}}</td>
+    </tr>
+    <!--    Section 4-->
+    <tr>
+        <td style="text-align: center;color: red"><h3>Le client dispose t'il déjà d'un site web ?</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{already_website}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Le lien vers son site web</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{link_website}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Les besoins spécifiques du client</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{specification_needed}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Le budget éstimé pour la réalisation du projet</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{estimated_budget}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>Le client a t'il défini une date d'échéance pour le projet</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{due_date}}</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;color: red"><h3>La date d'échéance</h3></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">{{due_date_needed}}</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
