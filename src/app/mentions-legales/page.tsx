@@ -35,26 +35,26 @@ export default function Page() {
                 <div className={"flex flex-col gap-5 border-b-except-last"}>
                     <div className={"flex flex-col gap-5 items-center py-3"} id={"website-editor"}>
                         <p className={"text-2xl font-medium"}>Éditeur du site</p>
-                        <CustomBlock title={"Nom de l'entreprise"} description={"SARL [Nom de votre SARL]"} image={"/Images/mentions-legales/edit.svg"} />
+                        <CustomBlock title={"Nom de l'entreprise"} description={"PSDOweb"} image={"/Images/mentions-legales/edit.svg"} />
                         <CustomBlock title={"Forme juridique"} description={"Société à responsabilité limitée (SARL)"} image={"/Images/mentions-legales/edit.svg"} />
-                        <CustomBlock title={"Adresse du siège social"} description={"[Adresse de votre entreprise]"} image={"/Images/mentions-legales/edit.svg"} />
-                        <CustomBlock title={"Numéro de téléphone"} description={"[Votre numéro de téléphone]"} image={"/Images/mentions-legales/edit.svg"} />
-                        <CustomBlock title={"Adresse e-mail"} description={"[Votre adresse e-mail]"} image={"/Images/mentions-legales/edit.svg"} />
-                        <CustomBlock title={"Numéro d'inscription au RCS"} description={"[Numéro d'immatriculation]"} image={"/Images/mentions-legales/edit.svg"} />
-                        <CustomBlock title={"Numéro de TVA intracommunautaire"} description={"[Numéro de TVA]"} image={"/Images/mentions-legales/edit.svg"} />
-                        <CustomBlock title={"Capital social"} description={"[Montant du capital social]"} image={"/Images/mentions-legales/edit.svg"} />
+                        <CustomBlock title={"Adresse du siège social"} description={"2A rue de l'Orangerie, 60000 Beauvais"} image={"/Images/mentions-legales/edit.svg"} />
+                        <CustomBlock title={"Numéro de téléphone"} description={"06-82-99-85-27"} image={"/Images/mentions-legales/edit.svg"} />
+                        <CustomBlock title={"Adresse e-mail"} description={"baptiste.petit@psdoweb.com"} image={"/Images/mentions-legales/edit.svg"} />
+                        <CustomBlock title={"Numéro d'inscription au RCS"} description={"929 021 145"} image={"/Images/mentions-legales/edit.svg"} />
+                        <CustomBlock title={"Numéro de TVA intracommunautaire"} description={"FR83929021145"} image={"/Images/mentions-legales/edit.svg"} />
+                        <CustomBlock title={"Capital social"} description={"100€"} image={"/Images/mentions-legales/edit.svg"} />
                     </div>
                     <div className={"flex flex-col gap-5 items-center py-3"} id={"upload-director"}>
                         <p className={"text-2xl font-medium"}>Directeur de la publication</p>
-                        <CustomBlock title={"Nom et prénom"} description={"[Nom du directeur de publication]"} image={"/Images/mentions-legales/director.svg"} />
-                        <CustomBlock title={"Statut"} description={"[Fonction au sein de la SARL]"} image={"/Images/mentions-legales/director.svg"} />
+                        <CustomBlock title={"Nom et prénom"} description={"Petit Baptiste"} image={"/Images/mentions-legales/director.svg"} />
+                        <CustomBlock title={"Statut"} description={"Gérant"} image={"/Images/mentions-legales/director.svg"} />
                     </div>
                     <div className={"flex flex-col gap-5 items-center py-3"} id={"web-hosting"}>
                         <p className={"text-2xl font-medium"}>Hébergeur du site</p>
-                        <CustomBlock title={"Nom de l'hébergeur"} description={"[Nom de l'hébergeur]"} image={"/Images/mentions-legales/hosting.svg"} />
-                        <CustomBlock title={"Adresse de l'hébergeur"} description={"[Adresse de l'hébergeur]"} image={"/Images/mentions-legales/hosting.svg"} />
+                        <CustomBlock title={"Nom de l'hébergeur"} description={"ovhcloud"} image={"/Images/mentions-legales/hosting.svg"} />
+                        <CustomBlock title={"Adresse de l'hébergeur"} description={"2 rue Kellermann - 59100 Roubaix - France"} image={"/Images/mentions-legales/hosting.svg"} />
                         <CustomBlock title={"Numéro de téléphone de l'hébergeur"}
-                            description={"[Numéro de téléphone de l'hébergeur]"} image={"/Images/mentions-legales/hosting.svg"} />
+                            description={"pas référencé"} image={"/Images/mentions-legales/hosting.svg"} />
                     </div>
                     <div className={"flex flex-col gap-5 items-center py-3"} id={"intellectual-property"}>
                         <p className={"text-2xl font-medium"}>Propriété intellectuelle</p>
@@ -65,21 +65,21 @@ export default function Page() {
                     <div className={"flex flex-col gap-5 items-center py-3"} id={"utilisation"}>
                         <p className={"text-2xl font-medium"}>{"Condition d'utilisation"}</p>
                         <div className={"border-2 border-custom_yellow rounded-lg p-3"}>
-                            <p className={"text-center font-medium sm:w-[30rem]"}>{"L'utilisation du site PSDOweb implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après. Ces conditions d'utilisation peuvent être modifiées ou complétées à tout moment, les utilisateurs du site [Nom du site] sont donc invités à les consulter de manière régulière."}
+                            <p className={"text-center font-medium sm:w-[30rem]"}>{"L'utilisation du site PSDOweb implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après. Ces conditions d'utilisation peuvent être modifiées ou complétées à tout moment, les utilisateurs du site PSDOweb sont donc invités à les consulter de manière régulière."}
                             </p>
                         </div>
                     </div>
                     <div className={"flex flex-col gap-5 items-center py-3"} id={"personal-data-protection"}>
                         <p className={"text-2xl font-medium text-center"}>Protection des données personnelles</p>
                         <div className={"border-2 border-custom_yellow rounded-lg p-3"}>
-                            <p className={"text-center font-medium sm:w-[30rem]"}>{"Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée, vous disposez d’un droit d’accès, de rectification, de modification et de suppression des données vous concernant. Vous pouvez exercer ce droit en envoyant un courrier à l'adresse suivante : [Adresse de votre entreprise] ou par email à [Votre adresse e-mail]."}
+                            <p className={"text-center font-medium sm:w-[30rem]"}>{"Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée, vous disposez d’un droit d’accès, de rectification, de modification et de suppression des données vous concernant. Vous pouvez exercer ce droit en envoyant un courrier à l'adresse suivante : 2A rue de l'Orangerie, 60000 Beauvais ou par email à baptiste.petit@psdoweb.com ."}
                             </p>
                         </div>
                     </div>
                     <div className={"flex flex-col gap-5 items-center py-3"} id={"cookies"}>
                         <p className={"text-2xl font-medium"}>Cookies</p>
                         <div className={"border-2 border-custom_yellow rounded-lg p-3"}>
-                            <p className={"text-center font-medium sm:w-[30rem]"}>{"Le site [Nom du site] peut être amené à vous demander l’acceptation des cookies pour des besoins de statistiques et d'affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez. Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur accède pour lire et enregistrer des informations."}
+                            <p className={"text-center font-medium sm:w-[30rem]"}>{"Le site PSDOweb peut être amené à vous demander l’acceptation des cookies pour des besoins de statistiques et d'affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez. Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur accède pour lire et enregistrer des informations."}
                             </p>
                         </div>
                     </div>

@@ -44,11 +44,10 @@ export default function Page() {
                     <p>Le site PSDOweb est édité par Petit Baptiste, SARL au capital de 100€ , dont le siège
                         social est situé à 2A rue de l’orangerie , 60000 Beauvais.</p>
                     <p>Numéro de téléphone :06-82-99-85-27 <br/>Adresse e-mail : baptiste.petit@psdoweb.com <br/>Numéro
-                        d&apos;inscription au RCS : [Numéro d&apos;immatriculation] <br/>Numéro de TVA
-                        intracommunautaire : [Numéro de TVA]</p>
+                        d&apos;inscription au RCS : 929 021 145 <br/>Numéro de TVA
+                        intracommunautaire : FR83929021145</p>
                     <p>Le Directeur de la publication est Petit Baptiste.</p>
-                    <p>Le site PSDOweb est hébergé par [Nom de l&apos;hébergeur], situé à [Adresse de
-                        l&apos;hébergeur].</p>
+                    <p>Le site PSDOweb est hébergé par ovhcloud, situé à 2 rue Kellermann, 59100 Roubaix France.</p>
                 </div>
             </section>
             <div className="relative">
