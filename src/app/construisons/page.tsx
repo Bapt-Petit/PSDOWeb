@@ -64,7 +64,7 @@ export default function Construisons() {
               <h3 className="text-base">Sécurité</h3>
             </div>
             <div className="flex flex-col items-center justify-center gap-2">
-              <Image src="/Images/home/developpement.png" alt="developpement_logo" width={100} height={100} className="" />
+              <Image src="/Images/home/Developpement.png" alt="developpement_logo" width={100} height={100} className="" />
               <h3 className="text-base">Développement</h3>
             </div>
             <div className="flex flex-col items-center justify-center gap-2">

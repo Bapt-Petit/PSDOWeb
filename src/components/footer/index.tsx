@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row h-fit gap-5 md:gap-2 md:mt-10">
-            <Link href="https://www.linkedin.com/company/103985488/admin/dashboard/"><Image src="/Images/socialmedia/Linkedin.png" alt="linkedin_link" width={60} height={60} className="w-5 md:w-10" /></Link>
+            <Link href="https://www.linkedin.com/company/103985488/admin/dashboard/"><Image src="/Images/socialmedia/LinkedIn.png" alt="linkedin_link" width={60} height={60} className="w-5 md:w-10" /></Link>
             <Link href="#"><Image src="/Images/socialmedia/Instagram.png" alt="instagram_link" width={60} height={60} className="w-5 md:w-10" /></Link>
             <Link href="mailto:baptiste.petit@psdoweb.com"><Image src="/Images/socialmedia/mail.png" alt="mail_link" width={60} height={60} className="w-5 md:w-10" /></Link>
           </div>

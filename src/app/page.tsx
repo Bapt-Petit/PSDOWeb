@@ -95,24 +95,24 @@ export default function Home() {
                 <div className={"flex mobile:flex-col mobile:items-center gap-20"}>
                     <motion.div initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0 }} viewport={{ once: true }} className={"flex flex-col items-center gap-3"}>
-                        <Image src={'/Images/home/professionnel.png'} alt={'Professionnel'} width={80} height={80}></Image>
-                        <p>Innovation</p>
+                        <Image src={'/Images/home/professionnel.png'} alt={'Professionnel'} width={100} height={100}></Image>
+                        <p>Professionnel</p>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }} className={"flex flex-col items-center gap-3"}>
-                        <Image src={'/Images/home/securite.png'} alt={'Sécurité'} width={80} height={80}></Image>
-                        <p>Fiabilité</p>
+                        <Image src={'/Images/home/securite.png'} alt={'Sécurité'} width={100} height={100}></Image>
+                        <p>Sécurité</p>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 1 }} viewport={{ once: true }} className={"flex flex-col items-center gap-3"}>
-                        <Image src={'/Images/home/Developpement.png'} alt={'Développement'} width={80} height={80}></Image>
-                        <p>Créativité</p>
+                        <Image src={'/Images/home/Developpement.png'} alt={'Développement'} width={100} height={100}></Image>
+                        <p>Développement</p>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 1.5 }} viewport={{ once: true }} className={"flex flex-col items-center gap-3"}>
-                        <Image src={'/Images/home/originalite.png'} alt={'Originalité'} width={80}
-                            height={80}></Image>
-                        <p>Personnalisation</p>
+                        <Image src={'/Images/home/originalite.png'} alt={'Originalité'} width={100}
+                            height={100}></Image>
+                        <p>Originalité</p>
                     </motion.div>
                 </div>
                 <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 2 }}
