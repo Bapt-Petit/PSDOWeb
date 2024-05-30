@@ -10,9 +10,9 @@ export default function Home() {
             <section
                 className={"relative flex flex-col mobile:items-center tablet:items-center gap-16 mobile:gap-8 bg-gradient-to-b from-0% from-custom_blue_black to-10% to-white px-44 mobile:px-10 py-24"}>
                 <motion.div initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}
-                    className={"flex flex-col items-center w-fit gap-5 px-16 mobile:px-5"}>
+                    className={"flex flex-col items-center w-fit gap-5 px-16 mobile:px-5 z-10"}>
                     <motion.h2
-                        className={"text-[70px] font-semibold mobile:text-4xl mobile:text-center"}>{"PSDO"}</motion.h2>
+                        className={"text-[70px] font-semibold tablet:text-6xl tablet:text-center"}>{"PSDO"}</motion.h2>
                     <p className={"text-center w-[30rem] mobile:w-[15rem]"}>{"Nous transformons vos idées en expériences numériques innovantes, capturant l'attention de votre public cible."}</p>
                     <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.05 }}>
                         <Link href={'/contact'}
@@ -22,7 +22,7 @@ export default function Home() {
                 </motion.div>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
                     <Image src={"/Images/logo.png"} alt={"Logo"} height={400} width={400}
-                        className={"absolute mobile:hidden tablet:hidden top-1/2 -translate-y-1/2 right-60 opacity-30"} />
+                        className={"absolute tablet:top-[57%] tablet:right-1/2 tablet:translate-x-1/2 top-1/2 -translate-y-1/2 right-60 opacity-30"} />
                 </motion.div>
             </section>
             <div className={"bg-[url('/Images/decoration/banner.png')] w-full h-44 object-cover object-center opacity-10"}></div>
@@ -57,7 +57,7 @@ export default function Home() {
                 <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }}
                     viewport={{ once: true }}>
                     <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.05 }}>
-                        <Link href={'/collaborateurs'} className={"bg-custom_yellow px-20 mobile:px-7 rounded-md py-3 text-xl"}>Rencontrez
+                        <Link href={'/collab'} className={"bg-custom_yellow px-20 mobile:px-7 rounded-md py-3 text-xl"}>Rencontrez
                             Notre
                             Équipe →</Link>
                     </motion.div>
@@ -76,7 +76,7 @@ export default function Home() {
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ once: true }} className={"text-4xl font-bold"}>Pourquoi nous ?
                 </motion.p>
-                <motion.p initial={{ opacity: 0, x: 150 }} whileInView={{ opacity: 1, x: 0 }}
+                <motion.p initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ once: true }}
                     className={"w-[35rem] mobile:w-[20rem] text-center"}>{"Nous offrons un accès exclusif à un réseau de développeurs indépendants, soigneusement sélectionnés pour leur expertise technique et leur fiabilité. Chaque développeur avec qui nous travaillons est un spécialiste dans son domaine, que ce soit le développement web ou la création d'applications mobiles."}</motion.p>
@@ -122,7 +122,7 @@ export default function Home() {
                     transition={{ type: "spring", bounce: 0.25, delay: 2 }}
                     viewport={{ once: true }}>
                     <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.05 }}>
-                        <Link href={'/construisons'} className={"bg-custom_yellow px-20 mobile:px-10 rounded-md py-3 text-xl"}>Parlons
+                        <Link href={'/'} className={"bg-custom_yellow px-20 mobile:px-10 rounded-md py-3 text-xl"}>Parlons
                             de
                             Votre Site
                             →</Link>

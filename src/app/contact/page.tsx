@@ -6,6 +6,7 @@ import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha"
 
 export default function Page() {
+    const [state, setState] = useState("Envoyer")
     const [showToast, setShowToast] = useState(false)
     const [captchaFailed, setCaptchaFailed] = useState(false)
     const [captchaValue, setCaptchaValue] = useState(null)
@@ -22,12 +23,15 @@ export default function Page() {
     }
     const handleCaptchaChange = (value: SetStateAction<null>) => {
         setCaptchaFailed(false)
+        setState("Envoyer")
         setCaptchaValue(value);
     }
     const submitHandler = async (e: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
         e.preventDefault()
+        setState("Envoi en cours...")
         if (!captchaValue) {
             setCaptchaFailed(true)
+            setState("Envoi échoué")
             return;
         }
         const formData = new FormData(e.target);
@@ -42,10 +46,12 @@ export default function Page() {
             body: JSON.stringify(data)
         })
         let responseData = await response.json();
-        if(responseData.success){
+        if (responseData.success) {
             setShowToast(true)
+            setState("Envoi réussi !")
             setTimeout(() => {
                 setShowToast(false)
+                setState("Envoyer")
             }, 5000)
         }
         e.target.reset();
@@ -67,7 +73,7 @@ export default function Page() {
                         className={"bg-gradient-to-b from-0% from-custom_blue_black to-[5%] to-white w-dvw flex flex-col items-center py-10"}>
                         <p className={"text-custom_blue_black text-3xl font-bold pb-10"}>Contactez-nous</p>
                         <div
-                            className={"z-10 bg-custom_yellow flex flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[30rem] p-5 rounded shadow-custom_shadow"}>
+                            className={"z-10 bg-custom_yellow flex flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[45vw] p-5 rounded shadow-custom_shadow"}>
                             <p className={"text-2xl font-bold text-center"}>Information personnelle</p>
                             <div className={"flex flex-col justify-center items-center gap-5"}>
                                 <CustomFormInput type={"text"} name={"name"} labelVal={"Nom & prénom"} required={true}/>
@@ -82,27 +88,27 @@ export default function Page() {
                     <section
                         className={"relative w-dvw flex flex-col items-center py-10"}>
                         <div
-                            className={"z-10 bg-custom_yellow flex flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[30rem] p-5 rounded shadow-custom_shadow"}>
+                            className={"z-10 bg-custom_yellow flex flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[45vw] p-5 rounded shadow-custom_shadow"}>
                             <p className={"text-2xl font-bold text-center"}>Votre projet</p>
                             <div className={"flex flex-col justify-center items-center gap-5"}>
                                 <CustomFormInput type={"text"} name={"project_type"} labelVal={"Type de projet"}/>
-                                <label htmlFor="projet_desc" className={"w-72 text-center font-medium"}>Veuillez fournir
+                                <label htmlFor="project_desc" className={"w-72 text-center font-medium"}>Veuillez fournir
                                     une
                                     brève
                                     description de votre projet</label>
                                 <motion.textarea whileFocus={{scale: 1.05}} transition={{duration: 0.3}}
                                                  id={"project_desc"}
                                                  name={"project_desc"}
-                                                 className={"rounded w-52 h-24 p-0.5 shadow-custom_shadow resize-none"}></motion.textarea>
+                                                 className={"rounded mobile:w-[15rem] w-[30vw] h-36 p-0.5 shadow-custom_shadow resize-none"}></motion.textarea>
                             </div>
                         </div>
                         <Image src={'/Images/decoration/banner.png'} alt={"banner"} width={2000} height={1000}
                                className={"absolute bottom-0 h-52 object-cover opacity-10"}/>
                     </section>
                     <section
-                        className={"w-dvw flex flex-col items-center py-10"}>
+                        className={"w-dvw flex flex-col items-center z-10 py-10"}>
                         <div
-                            className={"bg-custom_yellow flex flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[30rem] p-5 rounded shadow-custom_shadow"}>
+                            className={"bg-custom_yellow flex flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[45vw] p-5 rounded shadow-custom_shadow"}>
                             <label htmlFor="checkbox_info" className={"w-72 text-center font-medium"}>Pouvez-vous
                                 fournir
                                 des
@@ -121,7 +127,7 @@ export default function Page() {
                                         animate={{x: 0, opacity: 1}}
                                         transition={{duration: 0.5}}
                                         exit={{x: -100, opacity: 0}}
-                                        className={`${showMoreInfo ? "flex" : "hidden"} bg-custom_yellow flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[30rem] p-5 rounded shadow-custom_shadow z-10`}>
+                                        className={`${showMoreInfo ? "flex" : "hidden"} bg-custom_yellow flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[45vw] p-5 rounded shadow-custom_shadow z-10`}>
                                         <p className={"text-2xl text-center font-bold"}>Information supplémentaires</p>
                                         <CustomFormInput type={"text"} name={"fav_color"}
                                                          labelVal={"Quelle(s) couleur(s) préférez-vous ?"}/>
@@ -154,7 +160,7 @@ export default function Page() {
                     <section
                         className={"w-dvw flex flex-col items-center py-10"}>
                         <div
-                            className={"bg-custom_yellow flex flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[30rem] p-5 rounded shadow-custom_shadow"}>
+                            className={"bg-custom_yellow flex flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[45vw] p-5 rounded shadow-custom_shadow"}>
                             <div className={"flex flex-col justify-center items-center gap-5"}>
                                 <label htmlFor="checkbox_ispro" className={"w-72 text-center font-medium"}>Êtes-vous un
                                     professionnel ?</label>
@@ -173,7 +179,7 @@ export default function Page() {
                                         animate={{x: 0, opacity: 1}}
                                         transition={{duration: 0.5}}
                                         exit={{x: -100, opacity: 0}}
-                                        className={`bg-custom_yellow ${showIsPro ? "flex" : "hidden"} z-10 flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[30rem] p-5 rounded shadow-custom_shadow`}>
+                                        className={`bg-custom_yellow ${showIsPro ? "flex" : "hidden"} z-10 flex-col justify-center items-center gap-5 mobile:w-[20rem] w-[45vw] p-5 rounded shadow-custom_shadow`}>
                                         <p className={"text-2xl text-center font-bold"}>Informations sur votre
                                             entreprise</p>
                                         <div className={"flex flex-col justify-center items-center gap-5"}>
@@ -229,25 +235,25 @@ export default function Page() {
                                            onChange={handleCaptchaChange}/>
                             </div>
                             <motion.input initial={{scale: 1}} whileHover={{scale: 0.95}} type="submit"
-                                          value={"Envoyer"}
-                                          className={"bg-custom_yellow font-medium text-2xl w-[150px] p-1.5 rounded shadow-custom_shadow cursor-pointer"}/>
+                                          value={state}
+                                          className={"bg-custom_yellow font-medium text-2xl px-10 p-1.5 rounded shadow-custom_shadow cursor-pointer"}/>
                         </div>
                     </section>
                 </form>
                 <Image src={"/Images/decoration/Icons/1.png"} alt={''} width={140} height={140}
-                       className={"mobile:hidden absolute right-20 top-10 opacity-10"}/>
+                       className={"mobile:hidden absolute z-[5] right-20 top-10 opacity-10"}/>
                 <Image src={"/Images/decoration/Icons/2.png"} alt={''} width={140} height={140}
-                       className={"mobile:hidden absolute right-[30rem] top-[10rem] opacity-10"}/>
+                       className={"mobile:hidden absolute z-[5] right-[30rem] top-[10rem] opacity-10"}/>
                 <Image src={"/Images/decoration/Icons/3.png"} alt={''} width={200} height={200}
-                       className={"mobile:hidden absolute left-[19rem] top-[10rem] opacity-10"}/>
+                       className={"mobile:hidden absolute z-[5] left-[19rem] top-[10rem] opacity-10"}/>
                 <Image src={"/Images/decoration/Icons/4.png"} alt={''} width={160} height={160}
-                       className={"mobile:hidden absolute right-[10rem] top-[20rem] opacity-10"}/>
+                       className={"mobile:hidden absolute z-[5] right-[10rem] top-[20rem] opacity-10"}/>
                 <Image src={"/Images/decoration/Icons/6.png"} alt={''} width={160} height={160}
-                       className={"mobile:hidden absolute left-[10rem] top-[30rem] opacity-10"}/>
+                       className={"mobile:hidden absolute z-[5] left-[10rem] top-[30rem] opacity-10"}/>
                 <Image src={"/Images/decoration/Icons/4.png"} alt={''} width={300} height={300}
-                       className={"mobile:hidden absolute right-[10rem] top-[65rem] opacity-10"}/>
+                       className={"tablet:hidden absolute z-[5] right-[10rem] top-[65rem] opacity-10"}/>
                 <Image src={"/Images/decoration/Icons/4.png"} alt={''} width={300} height={300}
-                       className={"mobile:hidden absolute left-[10rem] top-[65rem] opacity-10"}/>
+                       className={"tablet:hidden absolute z-[5] left-[10rem] top-[65rem] opacity-10"}/>
             </div>
         </>
     )
