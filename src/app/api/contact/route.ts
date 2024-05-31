@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     // @ts-ignore
     transporter.use('compile', hbs(hbsOptions))
     let mailOptions = {
-        to: "baptiste.petit@psdoweb.com",
+        to: "bapt.petit60@gmail.com",
         subject: "Un client viens de vous contactez ! ✔", // Subject line
         template: 'template',
         context: data
