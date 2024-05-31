@@ -12,7 +12,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}
                     className={"flex flex-col items-center w-fit gap-5 px-16 mobile:px-5 z-10"}>
                     <motion.h2
-                        className={"text-[70px] font-semibold tablet:text-6xl tablet:text-center"}>{"PSDO"}</motion.h2>
+                        className={"text-[100px] font-semibold tablet:text-8xl tablet:text-center"}>{"PSDO"}</motion.h2>
                     <p className={"text-center w-[30rem] mobile:w-[15rem]"}>{"Nous transformons vos idées en expériences numériques innovantes, capturant l'attention de votre public cible."}</p>
                     <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.05 }}>
                         <Link href={'/contact'}
@@ -33,17 +33,21 @@ export default function Home() {
                         transition={{ duration: 1 }} viewport={{ once: true }}
                         className={"flex mobile:flex-col mobile:items-center gap-10"}>
                         <div className={"flex flex-col items-center gap-2"}>
+                            <Link href="https://www.gabinbuignet.xyz/">
                             <Image src={"/Images/Logo_collab.png"} alt={"Logo collaborateur"} height={100} width={100}
                                 className={"bg-black rounded-full"} />
+                            </Link>
                             <p className={"text-lg"}>Gabin Buignet</p>
                         </div>
                         <div className={"flex flex-col items-center gap-2"}>
+                            <Link href="">
                             <Image src={"/Images/logoCollab/logoMP.png"} alt={"Logo collaborateur"} height={100} width={100}
                                 className={"bg-black rounded-full"} />
+                            </Link> 
                             <p className={"text-lg"}>Maxime Petit</p>
                         </div>
                         <div className={"flex flex-col items-center gap-2"}>
-                            <Image src={"/Images/Logo_collab.png"} alt={"Logo collaborateur"} height={100} width={100}
+                            <Image src={"/Images/logoCollab/logoDL.png"} alt={"Logo collaborateur"} height={100} width={100}
                                 className={"bg-black rounded-full"} />
                             <p className={"text-lg"}>Damien Landa</p>
                         </div>
@@ -57,7 +61,7 @@ export default function Home() {
                 <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ type: "spring", bounce: 0.25 }}
                     viewport={{ once: true }}>
                     <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.05 }}>
-                        <Link href={'/collab'} className={"bg-custom_yellow px-20 mobile:px-7 rounded-md py-3 text-xl"}>Rencontrez
+                        <Link href={'/collaborateurs'} className={"bg-custom_yellow px-20 mobile:px-7 rounded-md py-3 text-xl"}>Rencontrez
                             Notre
                             Équipe →</Link>
                     </motion.div>
@@ -122,7 +126,7 @@ export default function Home() {
                     transition={{ type: "spring", bounce: 0.25, delay: 2 }}
                     viewport={{ once: true }}>
                     <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.05 }}>
-                        <Link href={'/'} className={"bg-custom_yellow px-20 mobile:px-10 rounded-md py-3 text-xl"}>Parlons
+                        <Link href={'/construisons'} className={"bg-custom_yellow px-20 mobile:px-10 rounded-md py-3 text-xl"}>Parlons
                             de
                             Votre Site
                             →</Link>
