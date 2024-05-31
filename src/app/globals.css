@@ -2,53 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  margin: 0;
-  padding: 0;
+.border-b-except-last > :not(:last-child) {
+    @apply border-b-2 border-dashed border-custom_yellow;
 }
 
-.custom-dashed-border {
-  position: relative;
-  width: 70%;
-  height: 5px;
-  border-color: white;
+body {
+
 }
 
-.custom-dashed-border::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 2px;
-  background: repeating-linear-gradient(
-    to right,
-    #F4D03F,
-    #F4D03F 25px,
-    transparent 25px,
-    transparent 50px
-  );
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.custom-dashed-border-mobil {
-  position: relative;
-  width: 100%;
-  height: 5px;
-  border-color: white;
+@keyframes zoom {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.custom-dashed-border-mobil::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 2px;
-  background: repeating-linear-gradient(
-    to right,
-    #F4D03F,
-    #F4D03F 15px,
-    transparent 15px,
-    transparent 25px
-  );
+.fadein {
+    animation: fadein 1s ease-in-out;
+}
+.zoom {
+    animation: zoom .3s ease-in-out;
+}
+.zoom_reverse {
+    animation: zoom reverse .3s ease-in-out;
 }
